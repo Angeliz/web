@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+}
+body{
+	background-color: rgb(222,222,222); 
+}
+
+
+aside{
+	/*margin: 20px auto;*/
+	padding: 30px;
+	/*width: 60%;*/
+	background: rgb(255, 255, 255);
+	line-height: 1.5;
+	text-align: center;
+	/*margin-bottom: 20px;
+	margin-top: 10px;*/
+	margin: 40px 40px 20px 20px;
+	flex: 1;
+	border-radius: 10px;
+}
+div {
+	margin: 40px 20px 20px 50px;
+	padding: 30px;
+	background: rgb(255, 255, 255);
+	line-height: 1.5;
+	border-radius: 10px;
+}
+/*#HTML,#JS{
+	margin: 0px auto;
+	padding: 30px;
+	background: rgb(255, 255, 255);
+	line-height: 1.5;
+}
+#CSS {
+	margin: 20px auto;
+	padding: 30px;
+	background: rgb(255, 255, 255);
+	line-height: 1.5;
+}*/
+
+.main{
+	display: flex;
+	/*margin: 20px 40px;*/
+	background-color: rgb(222,222,222);
+	margin: 0px;
+	padding: 0px;
+}
+.main .left{
+	flex: none;
+	float: left;
+	width: 65%;
+	background-color: rgb(222,222,222);
+	margin: 0px;
+	padding: 0px;
+}
+
+
+nav {
+	height: 60px;
+	background: rgb(51, 51, 51);
+	overflow: hidden;
+	padding-left: 10px;
+}
+nav h1 {
+	width: 20%;
+	float: left;
+	line-height: 60px;
+	vertical-align: middle;
+	color:white;
+}
+nav ul {
+	padding-right: 10px;
+	width: 40%;
+	float: right;
+	overflow: hidden;
+	line-height: 60px;
+	list-style: none;
+}
+nav li {
+	text-align: center;
+	width: 25%;
+	float: left;
+	color: white;
+}
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: white;
+}
+
+footer{
+	width: 100%
+	height: 60px;
+	background: rgb(51, 51, 51);
+	padding-left: 10px;
+	margin-top:20px; 
+}
+footer p{
+	line-height: 60px;
+	vertical-align: middle;
+	color:white;
+}
+	
+
+table{
+  border-collapse: collapse;
+}
+table th,#two{
+  background-color: rgb(204, 204, 204);
+}
+
+input[value] {
+	height: 50px;
+	width: 100%;
+	background: black;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+	line-height: 1.5;
+}

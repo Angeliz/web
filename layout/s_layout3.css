@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(222,222,222);
+}
+
+#container {
+	padding: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	background: rgb(255, 255, 255);
+	border: 1px solid #999;
+	overflow: auto;
+
+	display: flex;
+}
+div {
+	border: 1px solid #999;
+	background: rgb(255, 255, 255);
+	vertical-align: top;
+}
+
+#brief {
+	width: 200px;
+	/*margin: 20px;*/
+	/*margin-left: 20px;*/
+	padding: 20px;
+	/*position: relative;*/
+	float: left;
+	flex: none;
+}
+#brief img {
+	/*width: 160px;*/
+	width: 100%;
+	/*height: 120px;*/
+	float: left;
+}
+
+#main {
+	/*width: 905px;*/
+	margin:0px 20px 0px 20px ;
+	padding: 20px;
+	float: left;
+	flex: 1;
+}
+
+#personage {
+	width: 120px;
+	/*margin-left: 20px;*/
+	padding: 20px;
+	overflow: auto;
+	float: right;
+	flex: none;
+}
+#personage img {
+	width: 100%;
+	height: 120px;
+	/*float: right;*/
+}

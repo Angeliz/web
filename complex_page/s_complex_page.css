@@ -1,0 +1,198 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	background-color: black;
+}
+#main{
+	background-color: white;
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+}
+nav{
+	height: 60px;
+	background-color:#6495ED; 
+}
+nav #logo{
+	height: 60px;
+	width: auto;
+	margin: 0 40px;
+	float: left;
+}
+nav p{
+	float: right;
+	color: white;
+	line-height: 60px;
+	vertical-align: middle;
+	margin: 0 50px 0 30px; 
+}
+nav input{
+	float: right;
+	position: relative;
+	top:20px;
+}
+#left{
+	flex: 1;
+	background-color: #708090 ;
+	padding: 20px 50px;
+}
+#right{
+	flex: 4;
+}
+#head_portrait {
+	height: 60px;
+	width: auto;
+	margin: 0 10px 0 0 ;
+}
+#left span{
+	position: relative;
+	bottom: 20px;
+}
+.display{
+	display: flex;
+}
+#like{
+	margin: 20px 0px;
+}
+#one{
+	flex: 1;
+	border-right-style: solid;
+	/*border-top-width: 0px;*/
+  	border-right-width: 2px;
+  	/*border-bottom-width: 0px;
+ 	border-left-width: 0px;*/
+ 	border-color:black;
+}
+#two{
+	flex: 1;
+}
+.text_center{
+	text-align: center;
+}
+.center{
+	padding: 0 0 0 30px;
+}
+
+.line_height{
+	line-height: 2;
+}
+#right{
+	background-color: #DCDCDC;
+}
+#part1{
+	background-color: white;
+	padding: 0 0 0 10px;
+	margin: 0 0 20px 0;
+}
+#part1 p{
+	font-variant: "微软雅黑"；
+}
+#right #part2{
+	width: 90%;
+	margin: 0 auto;
+	background-color: white;
+	padding: 20px;
+}
+#part3{
+	display: flex;
+	width: 90%;
+	margin: 15px auto ;
+
+}
+#part3 .less{
+	flex: 1;
+	background-color: white;
+}
+#part3 .many{
+	flex: 3;
+	margin: 0 5px;
+	background-color: white;
+}
+#part4{
+	width: 90%;
+	margin: 0px auto ;
+}
+#part4_{
+	display: flex;
+}
+.statistics{
+	flex: 1;
+	margin: 0 0 0 20px;
+	background-color: white;
+}
+#first{
+	margin: 0;
+}
+#part5{
+	display: flex;
+	width: 90%;
+	margin: 20px auto ;
+}
+#part5_1{
+	flex: 5;
+	background-color: white;
+	margin: 0 10px 0 0;
+}
+#part5_2{
+	flex: 3;
+	background-color: white;
+}
+#part6{
+	display: flex;
+	width: 90%;
+	margin: 0 auto ;
+}
+#part6_1{
+	flex: 3;
+	background-color: white;
+	margin: 0 10px 0 0;
+}
+#part6_2{
+	flex: 5;
+	background-color: white;
+}
+
+
+
+
+ /*标签选项卡*/     
+#tab ul{
+	list-style:none; 
+	height:30px;
+	line-height:30px; 
+	border-bottom:2px #C88 solid;
+}
+#tab ul li{
+	background:#FFF;
+	cursor:pointer;
+	float:left;
+	list-style:none;
+	height:29px; 
+	line-height:29px;
+	padding:0px 10px; 
+	margin:0px 5px; 
+	border:1px solid #BBB; 
+}
+#tab_1{
+	margin: 0 10px 0 0;
+}
+#tab ul li.on{
+	border-top:2px solid Saddlebrown; 
+	/*border-bottom:2px solid #FFF;*/
+	border-bottom: none;
+}
+#tab div{
+	padding:1px; 
+	border:1px solid #336699;
+	padding:10px;
+	border-top:none;
+}
+.hide{
+	display:none;
+}
+#tab table{
+	/*border-collapse: collapse;*/
+}

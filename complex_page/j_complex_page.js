@@ -17,3 +17,9 @@ window.onload = function(){
         }
     }
 }
+
+$(document).ready(function(){
+    $("#baobiao").click(function(){
+        $("#baobiao_").fadeToggle(100);
+    });
+});

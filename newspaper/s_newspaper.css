@@ -124,11 +124,15 @@ hr{
 	float: left;
 	margin-right: 10px;
 }
-#text_top #wenhua{
+#Chinese{
+	margin-top: 10px;
+}
+#wenhua{
 	font-size: 20px;
 	font-family: "华文细黑";
 	font-weight: bold;
 	color: #DB7093;
+	
 }
 #text_top #xinguan{
 	font-size: 12px;
@@ -239,19 +243,18 @@ hr{
 	position: absolute;
 	top: 239px;
 }
-#bottom #two hr{
-	transform:rotate(90deg);
-	width: 55px;
-	height: 5px;
-	background-color: #75b86b;
-	position: absolute;
-	top: 27px;
+#border{
+	width: 40px;
+	height: 47px;
+	border-right: solid 2px #75b86b;
+	margin: 7px 0;
+	float: left;
+	margin-right:20px;
 }
 #bottom #two #new p{
 	color: white;
 	line-height: 61px;
 	vertical-align: middle;
-	text-align: center;
 }
 
 
@@ -278,6 +281,15 @@ hr{
 	width: 60%;
 	padding: 40px 20px 40px 20px; 
 	float: left;
+}
+#zero{
+	width: 60px;
+	height: 84px;
+	float: left;
+	border-right: solid 3px black;
+	margin-left: 5px;
+	margin-right: 15px;
+	font-size: 60px;
 }
 .quatation{
 	font-size: 60px;

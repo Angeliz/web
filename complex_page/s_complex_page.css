@@ -47,6 +47,11 @@ nav input{
 	width: auto;
 	margin: 0 10px 0 0 ;
 }
+
+
+
+
+
 #left span{
 	position: relative;
 	bottom: 20px;
@@ -78,7 +83,14 @@ nav input{
 
 .line_height{
 	line-height: 2;
+	cursor: pointer;
 }
+/*下拉列表*/
+#baobiao_{
+	list-style: none;
+	display: none;
+}
+
 #right{
 	background-color: #DCDCDC;
 }
@@ -126,6 +138,7 @@ nav input{
 	
 	display: flex;
 	position: absolute;
+	left: 0;
 	/*bottom: 24.6px;
 	left: 34px;*/
 }

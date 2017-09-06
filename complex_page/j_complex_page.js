@@ -18,6 +18,7 @@ window.onload = function(){
     }
 }
 
+
 // 左右滑动选择
 var myLeft=document.getElementById("left2");
 var myRight=document.getElementById("right2");
@@ -29,3 +30,11 @@ var myLong=document.getElementById("long");
 myLeft.onclick = function(){
     myLong.style.left=myLong.style.left - 108 + "px";
 }
+
+
+$(document).ready(function(){
+    $("#baobiao").click(function(){
+        $("#baobiao_").fadeToggle(100);
+    });
+});
+

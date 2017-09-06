@@ -17,3 +17,15 @@ window.onload = function(){
         }
     }
 }
+
+// 左右滑动选择
+var myLeft=document.getElementById("left2");
+var myRight=document.getElementById("right2");
+var myLong=document.getElementById("long");
+
+// var j=myLong.style.left;
+//  j=parseInt(j.substr(0,j.length-2));
+
+myLeft.onclick = function(){
+    myLong.style.left=myLong.style.left - 108 + "px";
+}

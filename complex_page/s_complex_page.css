@@ -96,21 +96,92 @@ nav input{
 	background-color: white;
 	padding: 20px;
 }
+
 #part3{
-	display: flex;
+	/*display: flex;*/
 	width: 90%;
 	margin: 15px auto ;
+	height: 41.6px;
+	position: relative;
+}
 
-}
-#part3 .less{
-	flex: 1;
+#part3 #left2{
+	width: 40px;
+	/*flex:1;*/
 	background-color: white;
+	float: left;
+	height: 41.6px;
 }
-#part3 .many{
-	flex: 3;
+#part3 #box{
+	width: 657px;
+	height: 42px;
+	
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+#part3 #box #long{
+	height: 41.6px;
+	width: 1018px;
+	
+	display: flex;
+	position: absolute;
+	/*bottom: 24.6px;
+	left: 34px;*/
+}
+#long .many{
+	flex: 1;
 	margin: 0 5px;
 	background-color: white;
 }
+#part3 #right0{
+	width: 143px; 
+	display: flex;
+	margin: 0 5px;
+	float: left;
+	height: 41.6px;
+}
+#right0 #right2{
+	/*width: 40px;*/
+	flex: 1;
+	background-color: white;
+	/*float: left;*/
+}
+#right0 #right1{
+	flex: 3;
+	/*width: 103px;*/
+	margin: 0 5px;
+	background-color: white;
+}
+
+
+
+
+/*#part3 .less{
+	flex: 1;
+	background-color: white;
+}*/
+
+/*#part3 .less{
+	background-color: white;
+	width: 34px;
+	float: left;
+	overflow: hidden;
+}*/
+
+
+
+
+/*#part3 .many{
+	background-color: white;
+	width: 102px;
+	margin: 0 5px;
+	float: left;
+	overflow: hidden;
+}*/
+
+
+
 #part4{
 	width: 90%;
 	margin: 0px auto ;

@@ -2,12 +2,18 @@
 <html>
 <head>
 	<title>FRAMESET</title>
+	<style type="text/css">
+		frame{
+			height: auto;
+			overflow: visible;
+		}
+	</style>
 </head>
-	<frameset rows="112,*" >
-		<frame src="E:/GitHub/og_in_cj/HD/HD.html" scrolling="no" name="top"></frame>
-		<frameset cols="20%,*">
-			<frame src="menu.html" scrolling="auto" name="left"></frame>
-			<frame src="E:/GitHub/og_in_cj/first_page/first_page.html" scrolling="auto" name="main"></frame>
+	<frameset rows="112,*" frameborder="no" border="0">
+		<frame src="E:/GitHub/og_in_cj/HD/HD.html" scrolling="no" name="top" noresize="noresize"></frame>
+		<frameset cols="20%,*" frameborder="0" border="0">
+			<frame src="menu.html" scrolling="auto" name="left" noresize="noresize"></frame>
+			<frame src="E:/GitHub/og_in_cj/first_page/first_page.html" scrolling="no" name="main" noresize="noresize"></frame>
 		</frameset>
 		<!-- <noframes>
 			<body>

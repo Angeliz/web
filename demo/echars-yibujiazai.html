@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="../js/tld/echarts3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        var myChart;
+
+        function display() {
+            myChart = echarts.init(document.getElementById('main'));
+            myChart.setOption({
+                title: {
+                    text: '异步数据加载示例'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['销量']
+                },
+                xAxis: {
+                    data: []
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [1, 2, 3, 4, 5, 6]
+                }]
+            });
+
+            // 初始 option
+            option = {
+                title: {
+                    text: '异步数据加载示例'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['销量']
+                },
+                xAxis: {
+                    data: []
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: []
+                }]
+            };
+        }
+
+        function fetchData(cb) {
+            // 通过 setTimeout 模拟异步加载
+            cb({
+                categories: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+                data: [Math.random(5), Math.random(20), Math.random(36), Math.random(10), Math.random(10), Math.random(20)]
+            });
+        }
+
+        function abc() {
+            fetchData(function(data) {
+                myChart.setOption({
+                    xAxis: {
+                        data: data.categories
+                    },
+                    series: [{
+                        // 根据名字对应到相应的系列
+                        name: '销量',
+                        data: data.data
+                    }]
+                });
+            });
+        }
+    </script>
+    <input type="button" value="display" onclick="display()" />
+    <input type="button" value="refresh" onclick="abc()" />
+
+</body>
+
+</html>

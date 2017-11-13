@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>force</title>
+	
+</head>
+<body>
+	
+	<div id="main" style="height: 600px;width: 800px">
+	</div>
+	<script type="text/javascript" src="assets/js/echarts.min1.js"></script>
+	<script type="text/javascript">
+		var myChart=echarts.init(document.getElementById('main'));
+		var option={
+			title: {
+		      text: '人际关系网络图'
+	    },
+	    toolbox: {
+		    show: true,
+		    feature : {
+		      dataView: {'show': true, 'readOnly': false},
+		      restore: {'show': true},
+		     	saveAsImage : {'show': true}
+
+		    }
+		  },
+    	layout:'force',
+      animationDuration: 1500,
+      animationEasingUpdate: 'quinticInOut',
+		  series : [{
+	      name: '人际关系网络图',
+	      type: 'graph',
+	      data: [
+		      {
+					    name: 'n1',
+					    // x: 10,
+					    // y: 10,
+					    value: 10
+					}, 
+					{
+					    name: 'n2',
+					    // x: 100,
+					    // y: 100,
+					    value: 20,
+					    symbolSize: 20,
+					    itemStyle: {
+					        normal: {
+					            color: 'red'
+					        }
+					    }
+					},
+					{
+					    name: 'n3',
+					    // x: 200,
+					    // y: 200,
+					    value: 10
+					}, 
+					{
+					    name: 'n4',
+					    // x: 300,
+					    // y: 300,
+					    value: 10
+					}
+				],
+	      links: [
+		      {
+					    source: 'n1',
+					    target: 'n2'
+					}, 
+					{
+					    source: 'n1',
+					    target: 'n3'
+					},
+					{
+					    source: 'n1',
+					    target: 'n4'
+					}, 
+					{
+					    source: 'n2',
+					    target: 'n3'
+					},
+					{
+					    source: 'n2',
+					    target: 'n4'
+					}, 
+					{
+					    source: 'n3',
+					    target: 'n4'
+					}
+				]
+      }]
+	  };
+	  myChart.setOption(option);
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex_test</title>
+	<style type="text/css">
+		@media only screen and (min-width: 641px) {
+			#parent{
+				display: flex;
+				flex-direction: row;
+			    flex-wrap: wrap;
+			    justify-content: space-between;
+			    align-items:center;
+			}
+			#child1{
+				height: 120px;		
+			}
+			#child2{
+				height: 100px;		
+			}
+			#child3{
+				height: 40px;		
+			}
+			#child4{
+				height: 200px;		
+			}
+			.child{
+				width: 150px;
+				background-color: black;
+				margin-top: 20px;
+
+			}
+		}
+		@media only screen and (max-width:641px){
+			#parent{
+				display: flex;
+				flex-direction: row;
+			    flex-wrap: wrap;
+			    justify-content: space-between;
+			    align-items:flex-start;
+			}
+			#child1{
+				height: 120px;		
+			}
+			#child2{
+				height: 100px;		
+			}
+			#child3{
+				height: 40px;		
+			}
+			#child4{
+				height: 200px;		
+			}
+			.child{
+				width: 150px;
+				background-color: black;
+				margin-top: 20px;
+
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="child1" class="child"></div>
+		<div id="child2" class="child"></div>
+		<div id="child3" class="child"></div>
+		<div id="child4" class="child"></div>
+	</div>
+</body>
+</html>

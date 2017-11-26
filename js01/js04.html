@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>IFE JavaScript Task 01</title>
+	<title>IFE JavaScript Task 04</title>
 </head>
 <body>
 	<input type="text" id="input">
@@ -21,42 +21,63 @@
     <script type="text/javascript">
     	var add=document.getElementById("input");
     	var list=document.getElementById("queue");
-    	//判断输入是否合法
-    	// function isAllow(){
-    	// 	// if(!isNaN(add.value)){
-    	// 	// 	return true;
-    	// 	// }
-    	// 	// else{
-    	// 	// 	alert("请输入数字");
-    	// 	// 	return false;
-    	// 	// }
-    	// 	var value=add.value;
-    	// 	if(isNaN(value)){
-    	// 		alert("请输入数字");
+    	// var value=add.value;
+    	// 判断输入是否合法
+    	// function isAllow(value){
+    	// 	if(!isNaN(value)){
+    	// 		return true;
+    	// 	}
+    	// 	else{
+    	// 		alert("格式不对！请输入数字");
+    	// 		return false;
     	// 	}
     	// }
-    	var value=add.value;
+
+    	//考虑数字的合法性
+        function inputNum(add) {
+            if (add.value == "") {
+                alert("请输入一个数字")
+            } else if (!isNaN(add.value)) {
+                return add.value
+            } else {
+                alert("格式不对，请重新输入一个数字！")
+                return "-1"
+            }
+        }
+    	
     	function leftIn(){
-    		// isAllow();
-    		var span = document.createElement("span");
-    		span.innerText=value;
-    		list.insertBefore(span, list.firstElementChild);
+    		var value = inputNum(add)
+            if (value !== "-1") {
+    			var span = document.createElement("span");
+    			span.innerText=value;
+    			list.insertBefore(span, list.firstElementChild);
+    		}
+    		
     	}
     	function rightIn(){
-    		// isAllow();
-    		var span = document.createElement("span");
-    		span.innerText=value;
-    		list.appendChild(span);
+    		var value = inputNum(add)
+            if (value !== "-1") {
+    			var span = document.createElement("span");
+    			span.innerText=value;
+    			list.appendChild(span);
+    		}
+    		
     	}
     	function leftOut(){
-    		// isAllow();
-    		alert(list.firstElementChild.innerText)
-            list.firstElementChild.remove()
+    		var value = inputNum(add)
+            if (value !== "-1") {
+    			alert(list.firstElementChild.innerText);
+            	list.firstElementChild.remove();
+            }
+    		
     	}
     	function rightOut(){
-    		// isAllow();
-    		alert(list.lastElementChild.innerText)
-            list.lastElementChild.remove()
+    		var value = inputNum(add)
+            if (value !== "-1") {
+    			alert(list.lastElementChild.innerText);
+            	list.lastElementChild.remove();
+        	}
+    		
     	}
     	//定义鼠标点击按钮事件
     	function init() {
@@ -70,15 +91,24 @@
             btnRightOut.onclick = function(){rightOut();}
         }
         init();
-        //队列点击即消失
+        // 队列点击即消失
         // var spans=list.getElementsByTagName("span");
         // spans.onclick=function(){
         // 	list.removeChild(this);
         // }
+
+        // list.addEventListener("click", function(e) {
+        //     if (event.target.nodeName.toLowerCase() == "span") {
+        //         list.removeChild(event.target)
+        //     }
+        // })
     </script>
 </body>
 </html>
-<!-- <!DOCTYPE html>
+ -->
+
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -178,4 +208,4 @@
 
 </body>
 
-</html> -->
+</html>

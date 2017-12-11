@@ -67,7 +67,98 @@
 	<button>后根遍历</button>
 	<button>层次遍历</button>
 	<script type="text/javascript">
-		
+		var btns=document.getElementsByTagName('button');
+		var preBtn=btns[0];
+		var inBtn=btns[1];
+		var lastBtn=btns[2];
+		var hieBtn=btns[3];
+		var treeNodes=[];
+		var treeRoot=document.getElementsByClassName('root')[0];
+		var timer=null;
+
+		window.onload=function(){
+			preBtn.onclick=function(){
+				reset();
+	            preOrder(treeRoot);
+	            changeColor();
+			};
+			inBtn.onclick=function(){
+	            reset();
+	            inOrder(treeRoot);
+	            changeColor();
+	        };
+	        lastBtn.onclick=function(){
+	            reset();
+	            lastOrder(treeRoot);
+	            changeColor();
+        	};
+        	hieBtn.onclick=function(){
+        		reset();
+        		hieOrder(treeRoot);
+        		changeColor();
+        	}
+		};
+		function reset(){
+	        treeNodes=[];
+	        clearInterval(timer);
+	        var divs= document.getElementsByTagName("div");
+	        for(var i=0;i<divs.length;i++){
+	            divs[i].style.backgroundColor="white";
+	        }
+	    }
+	    function preOrder(node){
+	    	if(node!=null){
+	    		treeNodes.push(node);
+	            preOrder(node.firstElementChild);
+	            preOrder(node.lastElementChild);
+	    	}
+	    }
+	    function inOrder(node){
+	        if(!(node==null)){
+	            inOrder(node.firstElementChild);
+	            treeNodes.push(node);
+	            inOrder(node.lastElementChild);
+	        }
+	    }
+	    function lastOrder(node){
+	        if(!(node==null)){
+	            lastOrder(node.firstElementChild);
+	            lastOrder(node.lastElementChild);
+	            treeNodes.push(node);
+	        }
+	    }
+	    function hieOrder(node){
+	    	if (node!=null) {
+	    		treeNodes.push(treeRoot);
+	    		var second=document.getElementsByClassName('second');
+	    		for(var i=0;i<second.length;i++){
+	    			treeNodes.push(second[i]);
+	    		}
+	    		var third=document.getElementsByClassName('third');
+	    		for(var i=0;i<third.length;i++){
+	    			treeNodes.push(third[i]);
+	    		}
+	    		var forth=document.getElementsByClassName('forth');
+	    		for(var i=0;i<forth.length;i++){
+	    			treeNodes.push(forth[i]);
+	    		}
+	    	}
+	    }
+	    function changeColor(){
+	        var i=0;
+	        treeNodes[i].style.backgroundColor="#F34949";
+	        timer=setInterval(function(){
+	            i++;
+	            if(i<treeNodes.length){
+	                treeNodes[i-1].style.backgroundColor="white";
+	                treeNodes[i].style.backgroundColor="#F34949";
+	            }else{
+	                clearInterval(timer);
+	                treeNodes[i].style.backgroundColor="white";
+	            }
+	        },700)
+	    }
+
 	</script>
 </body>
 </html>

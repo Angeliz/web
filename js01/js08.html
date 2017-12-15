@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js08</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			box-sizing: border-box;
+		}
+		div{
+			/*display: flex;
+			flex: 1;*/
+			margin:10px;
+			border: 2px solid black;
+		}
+		.root{
+			display: flex;
+			width: 1500px;
+			height: 300px;
+		}
+		.second{
+			flex: 1;
+			display: flex;
+		}
+		.third{
+			flex: 1;
+			display: flex;
+		}
+		.forth{
+			flex: 1;
+			/*display: flex;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="root">
+		文学
+		<div class="second">
+			文学理论
+			<div class="third">
+				文学的哲学基础
+			</div>
+			<div class="third">
+				文学的方法论
+			</div>
+		</div>
+		<div class="second">
+			世界文学
+			<div class="third">
+				作品评论和研究
+				<div class="forth">诗歌</div>
+				<div class="forth">戏剧文学</div>
+				<div class="forth">小说</div>
+			</div>
+			<div class="third">文学史、文学思想史</div>
+			<div class="third">作品集</div>
+		</div>
+		<div class="second">
+			中国文学
+			<div class="third">方针政策及其阐述</div>
+			<div class="third">
+				文学评论和研究
+				<div class="forth">文学批评史</div>
+				<div class="forth">古代文学</div>
+				<div class="forth">近代文学</div>
+				<div class="forth">当代文学</div>
+			</div>
+		</div>
+		<div class="second">
+			各国文学
+		</div>
+	</div>
+	<button id="preBtn">先根遍历</button>
+	<button id="lastBtn">后根遍历</button>
+	<!-- <button>层次遍历</button> -->
+	<br>
+	<input id="searchInput"  type="text" name="search">
+	<button id="searchBtn">查找</button>
+</body>
+<script type="text/javascript">
+	var treeRoot=document.getElementsByClassName('root')[0];
+	var treeNodes=[];
+	var preBtn=document.getElementById('preBtn');
+	var lastBtn=document.getElementById('lastBtn');
+	var timer=null;
+	var searchInput=document.getElementById('searchInput');
+	var searchBtn=document.getElementById('searchBtn');
+
+	var preOrder=function (node) {
+		treeNodes.push(node);
+		for(var i=0;i<node.children.length;i++){
+			if (node.children[i]!=null) {
+				preOrder(node.children[i]);
+			}
+		}
+	}
+	var lastOrder=function(node){
+		for(var i=0;i<node.children.length;i++){
+			if (node.children[i]!=null) {
+				lastOrder(node.children[i]);
+			}
+		}
+		treeNodes.push(node);
+	}
+	function changeColor(){
+		var i=0;
+		treeNodes[i].style.backgroundColor="#F34949";
+		timer=setInterval(function(){
+			i++;
+			if (i<treeNodes.length) {
+				treeNodes[i-1].style.backgroundColor="white";
+				treeNodes[i].style.backgroundColor="#F34949";
+			}
+			else{
+				clearInterval(timer);
+			}
+		},700)
+	}
+	function reset(){
+	        treeNodes=[];
+	        clearInterval(timer);
+	        var divs= document.getElementsByTagName("div");
+	        for(var i=0;i<divs.length;i++){
+	            divs[i].style.backgroundColor="white";
+	        }
+	}
+	function search(item){
+		var i=0;
+		treeNodes[i].style.backgroundColor="#F34949";
+		timer=setInterval(function(){
+			i++;
+			if (i<treeNodes.length) {
+				treeNodes[i-1].style.backgroundColor="white";
+				treeNodes[i].style.backgroundColor="#F34949";
+			}
+			else{
+				clearInterval(timer);
+			}
+		},700)
+	}
+	preBtn.onclick=function(){
+		reset();
+		preOrder(treeRoot);
+		console.log(treeNodes);
+		changeColor();
+	}
+	lastBtn.onclick=function(){
+		reset();
+		lastOrder(treeRoot);
+		changeColor();
+	}
+	searchBtn.onclick=function(){
+		var value=searchInput.value;
+		reset();
+		preOrder(treeRoot);
+		for(var i=0;i<treeNodes.length;i++){
+			if (value==treeNodes[i].innerText.split('\n')[0]) {
+				treeNodes.splice(i+1);
+				break;
+			}
+		}
+		search(value);
+	}
+</script>
+</html>

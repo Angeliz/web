@@ -153,6 +153,7 @@
 		var value=searchInput.value;
 		reset();
 		preOrder(treeRoot);
+		console.log(JSON.stringify(treeNodes[0].innerText));
 		for(var i=0;i<treeNodes.length;i++){
 			if (value==treeNodes[i].innerText.split('\n')[0]) {
 				treeNodes.splice(i+1);

@@ -1,11 +1,70 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>test</title>
+	<style type="text/css">
+	body,html{
+		padding: 0；
+		margin:0;
+		width: 100%;
+		height: 100%;
+	}
+	@keyframes myfirst{
+		from {height: 700px;}
+		to {height: 700px;}
+	}
+		#background{
+			margin:0;
+			padding: 0;
+			height: 700px;
+			background-image: url(E:/GitHub/freekg/webapp1/images/背景1.jpg);
+			background-size: cover;
+			animation: myfirst 5s;
+-moz-animation: myfirst 5s;	/* Firefox */
+-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+-o-animation: myfirst 5s;
+		}
+	</style>
 </head>
-<body>
-	<script type="text/javascript">
-		
-	</script>
+<body style="margin: 0;">
+	<div id="background">
+		<input type="" name="">
+	</div>
+<script type="text/javascript">
+	// var height=window.innerHeight;
+	// console.log(height);
+	// var background=document.getElementById('background');
+	// console.log(background.style.height);
+	// background.style.height=height;
+
+</script>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <style type="text/css">
+        .test{
+            background-image: url(E:/GitHub/freekg/webapp1/images/背景1.jpg);
+            width: auto;
+            height: 743px;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+        }
+
+    </style>
+    <body>
+        <div id="div" class="test"></div>
+        <script type="text/javascript">
+            document.getElementById("div").onclick=function(){
+                // document.getElementById("div").style.width="200px"
+                document.getElementById("div").style.height="200px"
+            }
+        </script>
+    </body>
 </html>
